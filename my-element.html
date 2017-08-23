@@ -1,0 +1,14 @@
+<dom-module id="my-element">
+    <template>
+        <div>This is just a HTML template</div>
+    </template>
+    <script type="module">
+        import {Element} from './node_modules/@polymer/polymer/polymer-element.js';
+
+        class MyElement extends Element {
+            static get is() { return 'my-element'; }
+        }
+
+        customElements.define(MyElement.is, MyElement);
+    </script>
+</dom-module>

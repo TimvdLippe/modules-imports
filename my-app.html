@@ -1,0 +1,16 @@
+<script type="module">
+import {Element} from './node_modules/@polymer/polymer/polymer-element.js';
+class MyApp extends Element {
+    static get is() { return 'my-app'; }
+    static get template() {
+        return `
+<header>Header!</header>
+<section>Section</section>
+<div>
+    <slot></slot>
+</div>
+`
+    }
+}
+customElements.define(MyApp.is, MyApp);
+</script>

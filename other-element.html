@@ -1,0 +1,24 @@
+<link rel="import" href="my-element.html">
+
+<dom-module id="other-element">
+    <template>
+        <style>
+            my-element {
+                background-color: red;
+                display: block;
+            }
+        </style>
+        <my-element></my-element>
+        <module-element></module-element>
+    </template>
+    <script type="module">
+        import {Element} from './node_modules/@polymer/polymer/polymer-element.js';
+        import {ModuleElement} from './module-element.js';
+
+        class OtherElement extends Element {
+            static get is() { return 'other-element'; }
+        }
+        
+        customElements.define(OtherElement.is, OtherElement);
+    </script>
+</dom-module>
